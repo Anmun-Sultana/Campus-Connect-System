@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-section">
+            <img src="images/logo.png" class="logo" alt="University Logo">
+            <h2 class="uni-name">XYZ University</h2>
+        </div>
+
+        <div class="menu-section">
+            <button class="menu-btn">Menu</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Campus Connect<br>System</h1>
+
+        <p class="hero-sub">
+            Each day, XYZ students, faculty, staff, and alumni worldwide commit their 
+            skills, knowledge, and energy to advancing the public good and making a 
+            lasting impact on society.
+        </p>
+        </div>
+        <div class="card-container">
+
+            <a href="admin.html" class="card">
+                <img src="images/admin.jpg" alt="Admin Image">
+                <h3>Admin</h3>
+                <p>Manage system data, users, and overall portal operations.</p>
+            </a>
+
+            <a href="student.html" class="card">
+                <img src="images/student.jpg" alt="Student Image">
+                <h3>Student</h3>
+                <p>Access course details, personal information, and progress.</p>
+            </a>
+
+            <a href="faculty.html" class="card">
+                <img src="images/faculty.jpg" alt="Faculty Image">
+                <h3>Faculty</h3>
+                <p>Manage classes, attendance, and academic activities.</p>
+            </a>
+
+        </div>
+
+        </div>
+    </section>
+
+
+        <!-- ================= MENU OVERLAY PANEL ================= -->
+        <div class="menu-overlay" id="menuPanel">
+            <div class="menu-content">
+                <span class="close-btn" id="closeMenu">&times;</span>
+
+                <div class="menu-grid">
+                    <a href="#" class="menu-item">Admin</a>
+                    <a href="#" class="menu-item">Student</a>
+                    <a href="#" class="menu-item">Faculty</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const menuBtn = document.querySelector('.menu-btn');
+            const menuPanel = document.getElementById('menuPanel');
+            const closeMenu = document.getElementById('closeMenu');
+
+            menuBtn.addEventListener('click', () => {
+                menuPanel.classList.add('active');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                menuPanel.classList.remove('active');
+            });
+
+            // Optional: close menu by clicking outside
+            menuPanel.addEventListener('click', (e) => {
+                if (e.target === menuPanel) {
+                    menuPanel.classList.remove('active');
+                }
+            });
+        </script>
+
+</body>
+</html>
